@@ -1,0 +1,17 @@
+.bgWrap {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bgWrap > div {
+  position: unset !important;
+}
+
+.bgWrap .bgImage {
+  object-fit: contain;
+  width: 100% !important;
+  height: unset !important;
+}
