@@ -42,12 +42,22 @@
   font-size: 60px;
   font-family: "OpinionPro", sans-serif;
   padding: 50px;
+  transition: all 0.25s ease-in;
+}
+
+.landingNav .landingMike:hover {
+  color: rgb(204, 156, 197);
 }
 
 .landingNav .landingMerch {
   font-size: 60px;
   font-family: "Permanent Marker", cursive;
   padding: 50px;
+  transition: all 0.25s ease-in;
+}
+
+.landingNav .landingMerch:hover {
+  color: rgb(64, 87, 110);
 }
 
 @media screen and (min-width: 768px) {

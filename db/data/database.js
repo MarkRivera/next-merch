@@ -9,39 +9,40 @@ const data = {
     city: "Los Angeles",
     state: "California",
     email: "mikexmerchant@gmail.com",
-    socials: {
-      twitter: {
+    socials: [
+      {
         name: "Twitter",
         url: "https://twitter.com/mikexmerchant",
       },
-      apple: {
+      {
         name: "Apple Music",
         url: "https://music.apple.com/us/artist/merch/1304437116",
       },
-      spotify: {
+      {
         name: "Spotify",
         url: "https://open.spotify.com/artist/1Ap1ybJJXfSHNW3hh5Bjxb",
       },
-      facebook: {
+      {
         name: "Facebook",
         url: "https://www.facebook.com/MikexMerchant/",
       },
-      soundCloud: {
+      {
         name: "SoundCloud",
         url: "https://soundcloud.com/mikexmerchant",
       },
-      youtube: {
+      {
         name: "Youtube",
         url: "https://www.youtube.com/user/MikeMerchantMusic",
       },
-      instagram: {
+      {
         name: "Instagram",
         url: "https://www.instagram.com/mikexmerchant/",
       },
-    },
+    ],
   },
 
   actingData: {
+    name: "Mike",
     metaData: {
       siteDescription: "A site for the actor Mike Merchant",
       thumbNailUrl: "/",
@@ -51,6 +52,7 @@ const data = {
   },
 
   artistData: {
+    name: "Merch",
     metaData: {
       siteDescription: "A site for the artist Mike Merchant",
       thumbNailUrl: "/",
@@ -71,7 +73,9 @@ const data = {
           { title: "Winter", artist: "Merch", time: "1:08" },
           { title: "Free", artist: "Merch", time: "3:58" },
         ],
-        numberOfTracks: tracks.length,
+        get numberOfTracks() {
+          return this.tracks.length;
+        },
         cover: "",
       },
 
@@ -96,7 +100,9 @@ const data = {
           { title: "Word of Mouth", artist: "Merch", time: "3:32" },
           { title: "You Did It", artist: "Merch", time: "2:48" },
         ],
-        numberOfTracks: tracks.length,
+        get numberOfTracks() {
+          return this.tracks.length;
+        },
         cover: "",
       },
     },
@@ -106,3 +112,5 @@ const data = {
     latest: {},
   },
 };
+
+export { data };
