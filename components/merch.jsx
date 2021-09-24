@@ -54,10 +54,10 @@ export default function Merch() {
 
         <nav className={styles.merchLinks}>
           <Link href="https://smarturl.it/thebeautifulbefore">
-            1. The Beautiful Before
+            The Beautiful Before
           </Link>
           <Link href="https://smarturl.it/somewhereinthemiddle">
-            2. Somewhere in the Middle
+            Somewhere in the Middle
           </Link>
 
           <Link href="/tour/">Tour</Link>
