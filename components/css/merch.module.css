@@ -23,9 +23,11 @@
 
 img.merchAlbumCover {
   position: absolute;
-  margin: auto;
-  width: 100%;
-  transform: scale(3);
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -162px;
 }
 
 .bgImgForeground {
@@ -78,16 +80,60 @@ img.merchAlbumCover {
     margin: 0 auto;
   }
 
-  .bgImgWrapper {
+  .merchBody .merchTitle {
+    font-size: 150px;
   }
 
-  .bgImgWrapper img {
-    transform: scale(1);
+  .merchLinks {
+    font-size: 30px;
+    transform: translateY(-61px);
+    width: 50%;
+  }
+
+  .merchAlbumCover {
+    transform: scale(2);
     max-width: 1200px;
-    margin-left: 0;
+  }
+
+  .merchOutNow {
+    transform: translate(210px, -336px);
+    text-align: end;
   }
 
   .bgImgForeground {
     width: 100vw;
+  }
+
+  .merchSocials {
+    justify-content: flex-end;
+    margin-right: 16px;
+  }
+
+  .merchSocialIcons {
+    margin: 12px;
+    height: 40px !important;
+    width: 40px !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .merchOutNow {
+    transform: translate(390px, -336px);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .merchBody .merchTitle {
+    margin-left: 0;
+  }
+
+  .merchLinks {
+    margin-left: 0;
+  }
+
+  .merchOutNow {
+    font-size: 42px;
+    transform: translate(500px, -336px);
+    text-align: center;
   }
 }

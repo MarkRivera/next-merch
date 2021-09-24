@@ -110,6 +110,8 @@ const data = {
     tours: {},
 
     latest: {},
+
+    outNow: "Somewhere In The Middle",
   },
 };
 

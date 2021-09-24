@@ -28,14 +28,17 @@ const mockAdapter = new MockAdapter(axios);
 // Grab Socials Data when GET request is sent
 mockAdapter.onGet("/socials").reply(200, data.generalData.socials);
 mockAdapter.onGet("/get-artist-name").reply(200, data.artistData.name);
+mockAdapter.onGet("/get-out-now").reply(200, data.artistData.outNow);
 
 export default function Merch() {
   const [socialData, setSocialData] = useState([]);
   const [artistName, setArtistName] = useState("");
+  const [outNow, setOutNow] = useState("");
 
   useEffect(() => {
     axios.get("/socials").then(res => setSocialData(res.data));
     axios.get("/get-artist-name").then(res => setArtistName(res.data));
+    axios.get("/get-out-now").then(res => setOutNow(res.data));
   }, []);
 
   return (
@@ -65,16 +68,18 @@ export default function Merch() {
         </nav>
 
         <h2 className={styles.merchOutNow}>
-          Somewhere
-          <br />
-          In The
-          <br />
-          Middle
-          <br />
+          {outNow.split(" ").map(word => {
+            return (
+              <>
+                {word}
+                <br />
+              </>
+            );
+          })}
           [Out Now]
         </h2>
 
-        <section className={styles.merchSocials}>
+        <footer className={styles.merchSocials}>
           {socialData.length
             ? socialData.map(element => {
                 return (
@@ -87,7 +92,7 @@ export default function Merch() {
                 );
               })
             : null}
-        </section>
+        </footer>
       </div>
     </>
   );
